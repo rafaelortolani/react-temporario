@@ -8,7 +8,7 @@ import {
 import { Divider } from 'semantic-ui-react';
 import NotFound from '../containers/not-found';
 import { endpoints } from './endpoints';
-import {MainMenu} from '../components/main-menu'
+import MainMenu from '../components/main-menu';
 
 // @ts-ignore
 @withRouter
