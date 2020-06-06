@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Container, Grid, Header } from 'semantic-ui-react';
-import { inject, observer } from 'mobx-react';
 
-export default class Sobre extends React.Component<Props> {
+export default class Sobre extends React.Component{
   render() {
     return (
       <Container>

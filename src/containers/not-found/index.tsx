@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { Container, Grid, Header } from 'semantic-ui-react';
-import { inject, observer } from 'mobx-react';
+import { Container } from 'semantic-ui-react';
 
-export default class NotFound extends React.Component<Props> {
+export default class NotFound extends React.Component {
   render() {
     return (
       <Container>
