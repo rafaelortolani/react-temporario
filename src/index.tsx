@@ -15,7 +15,8 @@ import 'semantic-ui-css/semantic.min.css';
 
 import {router} from './mobx';
 import './plugins/sentry.plugin';
-
+import Loading from './components/loading';
+import './apis/axios.api';
 
 const rootElement = document.getElementById('root');
 const browserHistory = createBrowserHistory();
@@ -24,6 +25,7 @@ const history = syncHistoryWithStore(browserHistory, router);
 ReactDOM.render(
   <React.StrictMode>
     <Provider { ...stores}>
+      <Loading />
       <Router history={history}>
         <Routes/>
       </Router>
