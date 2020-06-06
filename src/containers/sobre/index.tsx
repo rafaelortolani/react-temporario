@@ -1,14 +1,7 @@
 import * as React from 'react';
 import { Container, Grid, Header } from 'semantic-ui-react';
 import { inject, observer } from 'mobx-react';
-import NewRouterStore from '../../mobx/router.store';
 
-interface Props {
-  router: NewRouterStore;
-}
-
-@inject('router')
-@observer
 export default class Sobre extends React.Component<Props> {
   render() {
     return (
