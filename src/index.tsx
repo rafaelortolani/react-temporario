@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/browser';
 import * as serviceWorker from './serviceWorker';
 import * as stores from './mobx';
 
@@ -15,9 +14,8 @@ import './index.css';
 import 'semantic-ui-css/semantic.min.css';
 
 import {router} from './mobx';
+import './plugins/sentry.plugin';
 
-
-Sentry.init({dsn: "https://b4b4bbfc3bf84bddaaa637eb542b8485@o403744.ingest.sentry.io/5266722"});
 
 const rootElement = document.getElementById('root');
 const browserHistory = createBrowserHistory();
