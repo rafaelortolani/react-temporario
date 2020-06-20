@@ -4,6 +4,7 @@ import Home from '../containers/home';
 import Combustivel from '../containers/combustivel';
 import StarWars from '../containers/star-wars'
 import StarWarsDetails from '../containers/star-wars-details'
+import Cache from '../containers/cache'
 const publicUrl = process.env.PUBLIC_URL;
 
 interface EndPointsProps extends RouteProps {
@@ -16,5 +17,6 @@ export const endpoints: EndPointsProps[] = [
   { path: `${publicUrl}/combustivel`, name: 'Combustivel', component: Combustivel, exact: true },
   { path: `${publicUrl}/star-wars`, name: 'Star Wars', component: StarWars, exact: true },
   { path: `${publicUrl}/star-wars/:id`, component: StarWarsDetails, exact: true },
+  { path: `${publicUrl}/cache`, name: 'Cache', component: Cache, exact: true },
   { path: `${publicUrl}/sobre`, name: 'Sobre', component: Sobre, exact: true },
 ];
