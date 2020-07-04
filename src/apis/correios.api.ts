@@ -21,7 +21,7 @@ export const getZipCode = async (zipCode: number) => {
             formato:'jsonp'
          }});
 
-         if (request.data.cidade ==='0'){
+         if (request.data.resultado ==='0'){
              throw new Error('CEP não encontrado')
          }
          return request;
