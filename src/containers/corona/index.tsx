@@ -20,7 +20,7 @@ export default class Corona extends React.Component<Props>{
     }
 
     render (){
-        const {summary, countryCode, handleForm} = this.props.corona;
+        const {summary, countryCode, handleForm, countriesOptions} = this.props.corona;
 
         return(
             <Container>
@@ -54,7 +54,7 @@ export default class Corona extends React.Component<Props>{
                                     value={countryCode}
                                     clearable={true}
                                     onChange={handleForm}
-                                    options={[]}/>
+                                    options={countriesOptions}/>
                                 </Form.Field>
                             </Form.Group>
                         </Form>
