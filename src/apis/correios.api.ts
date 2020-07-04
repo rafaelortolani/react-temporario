@@ -13,7 +13,7 @@ export interface GetZipCode {
     logradouro: string;
 }
 
-export const GetZipCode = async (zipCode: number) => {
+export const getZipCode = async (zipCode: number) => {
     const request = await axios.request<GetZipCode>({
         baseURL, 
         params:{
@@ -21,7 +21,7 @@ export const GetZipCode = async (zipCode: number) => {
             formato:'jsonp'
          }});
 
-         if (request.data.cidade===''){
+         if (request.data.cidade ==='0'){
              throw new Error('CEP não encontrado')
          }
          return request;
