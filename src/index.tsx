@@ -17,7 +17,7 @@ import {router} from './mobx';
 import './plugins/sentry.plugin';
 import Loading from './components/loading';
 import './apis/axios.api';
-
+import './plugins/one-signal.plugin';
 const rootElement = document.getElementById('root');
 const browserHistory = createBrowserHistory();
 const history = syncHistoryWithStore(browserHistory, router);
