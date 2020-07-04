@@ -4,11 +4,13 @@ import {
   Route,
   withRouter,
   Switch,
+  Redirect,
 } from 'react-router-dom';
 import { Divider } from 'semantic-ui-react';
 import NotFound from '../containers/not-found';
-import { endpoints } from './endpoints';
+import { endpoints, loginEndpoints } from './endpoints';
 import MainMenu from '../components/main-menu';
+import { isLoggedIn } from '../utils/auth.utils';
 
 // @ts-ignore
 @withRouter
@@ -18,6 +20,12 @@ export default class Routes extends React.Component {
   render() {
     return (
       <>
+         {loginEndpoints.map((route, i) => (
+            <Route key={i} {...route} />)
+          )}
+          {isLoggedIn() ? 
+          <>
+          
         <MainMenu/>
         <Divider hidden={true} />
         <Switch>
@@ -25,7 +33,7 @@ export default class Routes extends React.Component {
             <Route key={i} {...route} />)
           )}
           <Route path='*' exact={true} render={props => <NotFound {...props} />} />
-        </Switch>
+        </Switch> </> : <Redirect to={{pathname: 'login'}} />}
       </>
     );
   }
