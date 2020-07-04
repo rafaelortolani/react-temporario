@@ -36,10 +36,10 @@ export default class CoronaStore {
     @computed get countriesOptions(){
         return this.countries.sort((a,b) => {
             if (a.Country < b.Country){
-                return -1
+                return -1 
             }
             if (a.Country > b.Country){
-                return -1
+                return 1
             }
 
             return 0;
@@ -52,6 +52,11 @@ export default class CoronaStore {
             }
         })
     }
+
+    @computed get countriesFiltered(){
+        return this.summary?.Countries?.filter((x) => this.countryCode ==='' || x.Country === this.countryCode)
+    }
   }
+  
   const corona = new CoronaStore();
   export { corona };
