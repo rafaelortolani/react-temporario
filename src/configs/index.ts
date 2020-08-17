@@ -7,5 +7,4 @@ export const configs= {
         corona: process.env.REACT_APP_CORONA_URL
     },
     sentry: process.env.REACT_APP_SENTRY_DNS,
-    onesignal: process.env.REACT_APP_ONE_SIGNAL!,
 }
